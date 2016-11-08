@@ -1,38 +1,25 @@
-
-
 <!DOCTYPE html>
 <html lang="zn-Hans">
+
 <head>
-    
     <meta name="author" content="Aprilbilibili">
-    
     <meta name="description" content="web前端技术">
-    
-    
-
-    
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="alternative" href="YOUR_RSS_ADDRESS" title="Aprilbilibili&#39;s Blog" type="application/atom+xml">
-    
-    
-    
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aprilbilibili&#39;s Blog · 不懂就要来学习</title>
-
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
-
     <!-- Javascript -->
     <script src="/js/jquery-2.1.0.min.js"></script>
     <script src="/js/jquery.backstretch.min.js"></script>
     <script src="/bootstrap/js/bootstrap.min.js"></script>
     <script src="/js/headroom.min.js"></script>
-    <script src="/js/jquery.headroom.min.js"></script> 
+    <script src="/js/jquery.headroom.min.js"></script>
     <script src="/js/common.js"></script>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -40,6 +27,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
     <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="banner">
         <div class="container">
@@ -52,107 +40,75 @@
                 </button>
                 <a class="navbar-brand" href="http://yoursite.com" title="Aprilbilibili's Blog">Aprilbilibili&#39;s Blog</a>
             </div>
-
             <div role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
                 <p class="navbar-text pull-right">不懂就要来学习</p>
-
                 <ul class="nav navbar-nav">
-                    
                     <li id="nav-index"><a href="/">首页</a></li>
-                    
                     <li id="nav-archives"><a href="/archives">归档</a></li>
-                    
                     <li id="nav-tags"><a href="/tags">标签</a></li>
-                    
                     <li id="nav-categories"><a href="/categories">分类</a></li>
-                    
                     <li id="nav-curriculumvitae"><a href="/curriculumvitae">关于</a></li>
-                    
                     <li id="nav-links"><a href="/links">链接</a></li>
-                    
-                    
                     <li><a href="https://github.com/Aprilbilibili" target="_blank">GitHub</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
     <script>
     var backRoot = "/images/background/";
-    var backArray = [ "1.jpg", "2.jpg", "3.jpg",  ];
-        
+    var backArray = ["1.jpg", "2.jpg", "3.jpg", ];
+
     $(function() {
         // page-id...
         var pageId = "index.html";
         pageId = pageId.substr(0, pageId.indexOf("/"));
-        if(pageId === "") pageId = "index";
-        
+        if (pageId === "") pageId = "index";
+
         $("#nav-" + pageId).addClass("active");
     });
     </script>
-
-    
-<article class="post container">
-    <div class="jumbotron">
-        <h1><a href="/2016/11/08/第一篇博文/" title="第一篇博文">第一篇博文</a></h1>
-
-        
+    <article class="post container">
+        <div class="jumbotron">
+            <h1><a href="/2016/11/08/第一篇博文/" title="第一篇博文">第一篇博文</a></h1>
             <p>第一篇博文非常开心能使用markdown来写博客，接下来我要配置的是hexo的主题。</p>
-        
-
-        <p class="say-title">
-            —— <img src="/images/avatar.gif" class="img-circle index-post-avatar" />
-            <a href="http://yoursite.com" target="_blank" title="Aprilbilibili">Aprilbilibili</a>
-            于2016-11-08自豪地以 <a class="article-tag-link" href="/tags/hexo/">hexo</a> 唠嗑
-        </p>
-    </div>
-</article>
-
-<article class="post container">
-    <div class="jumbotron">
-        <h1><a href="/2016/11/08/hello-world/" title="Hello World">Hello World</a></h1>
-
-        
+            <p class="say-title">
+                —— <img src="/images/avatar.gif" class="img-circle index-post-avatar" />
+                <a href="http://yoursite.com" target="_blank" title="Aprilbilibili">Aprilbilibili</a> 于2016-11-08自豪地以 <a class="article-tag-link" href="/tags/hexo/">hexo</a> 唠嗑
+            </p>
+        </div>
+    </article>
+    <article class="post container">
+        <div class="jumbotron">
+            <h1><a href="/2016/11/08/hello-world/" title="Hello World">Hello World</a></h1>
             <p>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the </p>
-        
-
-        <p class="say-title">
-            —— <img src="/images/avatar.gif" class="img-circle index-post-avatar" />
-            <a href="http://yoursite.com" target="_blank" title="Aprilbilibili">Aprilbilibili</a>
-            于2016-11-08自豪地唠嗑
-        </p>
-    </div>
-</article>
-
-
-
-
-<script>
-$(function() {
-    $("article:first").addClass("first-post");
-});
-</script>
+            <p class="say-title">
+                —— <img src="/images/avatar.gif" class="img-circle index-post-avatar" />
+                <a href="http://yoursite.com" target="_blank" title="Aprilbilibili">Aprilbilibili</a> 于2016-11-08自豪地唠嗑
+            </p>
+        </div>
+    </article>
+    <script>
+    $(function() {
+        $("article:first").addClass("first-post");
+    });
+    </script>
     <footer id="footer">
-    <div id="bottom-tip">
-        Aprilbilibili&#39;s Blog —— <small>不懂就要来学习</small>
-    </div>
-        <small>该博客由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动，搭载 <a href="https://github.com/XadillaX/hexadillax" target="_blank">Hexadillax</a> 主题</small><br />
+        <div id="bottom-tip">
+            Aprilbilibili&#39;s Blog —— <small>不懂就要来学习</small>
+        </div>
+        <small>该博客由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动，搭载 <a href="https://github.com/XadillaX/hexadillax" target="_blank">Hexadillax</a> 主题</small>
+        <br />
         <small>&copy; 2014 Aprilbilibili</small>
     </footer>
-
-    
     <script>
     var _hmt = _hmt || [];
     (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?四月的炮姐";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?四月的炮姐";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
     })();
     </script>
-
-
-
 </body>
-</html>
 
+</html>
