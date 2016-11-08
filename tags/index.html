@@ -19,7 +19,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aprilbilibili&#39;s Blog · 不懂就要来学习</title>
+    <title>Tag:   | Aprilbilibili&#39;s Blog · 不懂就要来学习</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
@@ -83,7 +83,7 @@
         
     $(function() {
         // page-id...
-        var pageId = "index.html";
+        var pageId = "tags/index.html";
         pageId = pageId.substr(0, pageId.indexOf("/"));
         if(pageId === "") pageId = "index";
         
@@ -92,47 +92,43 @@
     </script>
 
     
-<article class="post container">
-    <div class="jumbotron">
-        <h1><a href="/2016/11/08/第一篇博文/" title="第一篇博文">第一篇博文</a></h1>
 
+<div class="container archive-body">
+    <div class="row">
+        <div class="col-xs-3 well">
+            <div class="archive-title" >
+                <h2 class="tag-icon">标签</h2>
+                
+                <a data-src="/tags/hexo/" href="#hexo" title="hexo">hexo<sup>1</sup></a>
+                
+            </div>
+        </div>
         
-            <p>#第一篇博文
-非常开心能使用markdown来写博客，接下来我要配置的是hexo的主题。</p>
-        
-
-        <p class="say-title">
-            —— <img src="/images/avatar.gif" class="img-circle index-post-avatar" />
-            <a href="http://yoursite.com" target="_blank" title="Aprilbilibili">Aprilbilibili</a>
-            于2016-11-08自豪地以 <a class="article-tag-link" href="/tags/hexo/">hexo</a> 唠嗑
-        </p>
+        <div class="all-list-box">
+        </div>
     </div>
-</article>
-
-<article class="post container">
-    <div class="jumbotron">
-        <h1><a href="/2016/11/08/hello-world/" title="Hello World">Hello World</a></h1>
-
-        
-            <p>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the </p>
-        
-
-        <p class="say-title">
-            —— <img src="/images/avatar.gif" class="img-circle index-post-avatar" />
-            <a href="http://yoursite.com" target="_blank" title="Aprilbilibili">Aprilbilibili</a>
-            于2016-11-08自豪地唠嗑
-        </p>
-    </div>
-</article>
-
-
-
-
+</div>
+    
 <script>
 $(function() {
-    $("article:first").addClass("first-post");
+    var box = $('.all-list-box');
+    var first = $('.archive-title a:first-of-type');
+    var list = $('.archive-title a');
+    
+    box.load(first.attr('data-src').toString() + ' #tag-list-body');
+    first.addClass('currentTag');
+    list.each(function() {
+        $(this).click(function() {
+            var listSrc = $(this).attr('data-src').toString() + ' #tag-list-body';
+            box.load(listSrc);
+            list.removeClass('currentTag');
+            $(this).addClass('currentTag');
+        });
+    });
 });
 </script>
+
+
     <footer id="footer">
     <div id="bottom-tip">
         Aprilbilibili&#39;s Blog —— <small>不懂就要来学习</small>
